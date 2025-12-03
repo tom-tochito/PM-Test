@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./Footer.module.css";
+import Logo from "@/components/ui/Logo";
 
 const quickLinks = ["About Us", "Our Markets", "Platforms", "Pricing"];
 const supportLinks = ["Help Center", "FAQs", "Terms & Conditions", "Privacy Policy"];
@@ -68,13 +69,7 @@ export default function Footer() {
         {/* Main Footer Content */}
         <div className={styles.mainContent}>
           <div className={styles.brandSection}>
-            <Image
-              src="/assets/images/logo-white.png"
-              alt="Premier Markets"
-              width={160}
-              height={45}
-              className={styles.logo}
-            />
+            <Logo variant="light" className={styles.logo} />
             <p className={styles.brandDescription}>
               CFDs are complex instruments and come with a high risk of losing
               money rapidly due to leverage. 21.38% of retail investor accounts

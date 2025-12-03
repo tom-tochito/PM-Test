@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import styles from "./Header.module.css";
 import Button from "@/components/ui/Button";
+import Logo from "@/components/ui/Logo";
 
 const navItems = [
   {
@@ -117,13 +118,7 @@ export default function Header() {
       <nav className={styles.nav}>
         <div className={styles.navContent}>
           <div className={styles.logo}>
-            <Image
-              src="/assets/images/logo.png"
-              alt="Premier Markets"
-              width={160}
-              height={45}
-              priority
-            />
+            <Logo variant="dark" />
           </div>
 
           {/* Desktop Navigation */}
@@ -206,6 +201,14 @@ export default function Header() {
             <Button variant="primary" size="sm">
               Register
             </Button>
+            <a href="#" className={styles.userIcon} aria-label="User profile">
+              <Image
+                src="/assets/images/user-icon.svg"
+                alt=""
+                width={24}
+                height={26}
+              />
+            </a>
           </div>
 
           {/* Mobile menu button */}
