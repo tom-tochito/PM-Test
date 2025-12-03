@@ -1,0 +1,168 @@
+.footer {
+  background-color: #111111;
+  padding: 60px 0 0;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.paymentSection {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
+}
+
+.paymentImage {
+  opacity: 0.8;
+}
+
+.divider {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.mainContent {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  padding: 60px 0;
+}
+
+.brandSection {
+  max-width: 425px;
+}
+
+.logo {
+  margin-bottom: 32px;
+}
+
+.brandDescription {
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 28px;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 16px;
+}
+
+.socialLink {
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  transition: all var(--transition-fast);
+}
+
+.socialLink:first-child {
+  color: var(--color-primary);
+}
+
+.socialLink:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.linksSection {
+  display: flex;
+  gap: 120px;
+}
+
+.linkColumn {
+  min-width: 150px;
+}
+
+.linkTitle {
+  font-family: var(--font-urbanist);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-white);
+  letter-spacing: 0.15px;
+  margin-bottom: 20px;
+}
+
+.linkList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.linkList a {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  transition: color var(--transition-fast);
+}
+
+.linkList a:hover {
+  color: var(--color-white);
+}
+
+.disclaimer {
+  padding: 48px 0;
+  text-align: center;
+}
+
+.disclaimer p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 1170px;
+  margin: 0 auto 24px;
+}
+
+.disclaimer p:last-child {
+  margin-bottom: 0;
+}
+
+.copyright {
+  padding: 24px 0;
+  text-align: center;
+  opacity: 0.7;
+}
+
+.copyright p {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 1024px) {
+  .mainContent {
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .brandSection {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .socialLinks {
+    justify-content: center;
+  }
+
+  .linksSection {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 48px;
+  }
+
+  .linkColumn {
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .linksSection {
+    flex-direction: column;
+    gap: 32px;
+  }
+}
