@@ -1,0 +1,80 @@
+.section {
+  padding: 60px 0;
+  background-color: #1a1a1a;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+}
+
+.stepIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stepContent {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stepTitle {
+  font-family: var(--font-gilroy);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+.stepDescription {
+  font-size: 14px;
+  color: var(--color-gray-neutral);
+}
+
+.connector {
+  position: absolute;
+  right: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 2px;
+  background-color: var(--color-primary);
+}
+
+@media (max-width: 1024px) {
+  .steps {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .connector {
+    display: none;
+  }
+
+  .step {
+    width: 100%;
+    max-width: 300px;
+  }
+}
