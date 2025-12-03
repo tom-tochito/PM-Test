@@ -1,0 +1,290 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--color-white);
+}
+
+/* Top Bar */
+.topBar {
+  background-color: var(--color-white);
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.topBarContent {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 8px var(--container-padding);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accountType {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.activeType {
+  color: var(--color-primary);
+}
+
+.separator {
+  color: #d6d6d6;
+}
+
+.topLinks {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.languageSelector {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.flag {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Main Navigation */
+.nav {
+  background-color: var(--color-white);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.navContent {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 16px var(--container-padding);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.logo {
+  flex-shrink: 0;
+}
+
+.navItems {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex: 1;
+  justify-content: center;
+}
+
+.navItemWrapper {
+  position: relative;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-black);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 0;
+  transition: color var(--transition-fast);
+}
+
+.navItem:hover {
+  color: var(--color-primary);
+}
+
+.highlighted {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.chevron {
+  transition: transform var(--transition-fast);
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+.arrowIcon {
+  margin-left: 4px;
+}
+
+/* Dropdown */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+  background-color: var(--color-white);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  padding: 8px 0;
+  z-index: 50;
+}
+
+.dropdownItem {
+  display: block;
+  padding: 10px 16px;
+  font-size: 14px;
+  color: var(--color-black);
+  transition: background-color var(--transition-fast);
+}
+
+.dropdownItem:hover {
+  background-color: #f5f5f5;
+  color: var(--color-primary);
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Mobile Menu Button */
+.mobileMenuBtn {
+  display: none;
+  width: 32px;
+  height: 32px;
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-black);
+  transition: all var(--transition-fast);
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-black);
+  transition: all var(--transition-fast);
+}
+
+.hamburger::before {
+  top: -8px;
+}
+
+.hamburger::after {
+  bottom: -8px;
+}
+
+.hamburger.open {
+  background-color: transparent;
+}
+
+.hamburger.open::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.hamburger.open::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
+/* Mobile Navigation */
+.mobileNav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--color-white);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+}
+
+.mobileNavItem {
+  border-bottom: 1px solid #eee;
+}
+
+.mobileNavButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 16px 0;
+  font-size: 16px;
+  color: var(--color-black);
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.mobileDropdown {
+  padding-bottom: 8px;
+}
+
+.mobileDropdownItem {
+  display: block;
+  padding: 12px 16px;
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}
+
+.mobileActions {
+  padding-top: 16px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .topBar {
+    display: none;
+  }
+
+  .navItems {
+    display: none;
+  }
+
+  .actions {
+    display: none;
+  }
+
+  .mobileMenuBtn {
+    display: block;
+  }
+
+  .mobileNav {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .navContent {
+    padding: 12px 24px;
+  }
+
+  .logo img {
+    width: 120px;
+    height: auto;
+  }
+}
