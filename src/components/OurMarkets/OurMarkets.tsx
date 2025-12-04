@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import styles from "./OurMarkets.module.css";
+import Icon from "@/components/ui/Icon";
 
 const categories = [
   { id: "most-traded", label: "Most Traded" },
@@ -148,15 +149,7 @@ export default function OurMarkets() {
           </span>
           <a href="#" className={styles.browseLink}>
             Browse all markets
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path
-                d="M6 4L10 8L6 12"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+            <Icon name="chevron-right" size={16} />
           </a>
         </div>
       </div>

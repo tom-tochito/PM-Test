@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./DailyUpdates.module.css";
+import Icon from "@/components/ui/Icon";
 
 const articles = [
   {
@@ -23,15 +24,7 @@ export default function DailyUpdates() {
           </h2>
           <a href="#" className={styles.viewAll}>
             View all
-            <svg width="6" height="12" viewBox="0 0 6 12" fill="none">
-              <path
-                d="M1 1L5 6L1 11"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+            <Icon name="chevron-right-sm" width={6} height={12} />
           </a>
         </div>
 
@@ -70,12 +63,7 @@ export default function DailyUpdates() {
             />
             <div className={styles.videoOverlay} />
             <button className={styles.playButton} aria-label="Play video">
-              <svg width="19" height="23" viewBox="0 0 19 23" fill="none">
-                <path
-                  d="M19 11.5L0 23V0L19 11.5Z"
-                  fill="white"
-                />
-              </svg>
+              <Icon name="play" width={19} height={23} color="white" />
             </button>
           </div>
 

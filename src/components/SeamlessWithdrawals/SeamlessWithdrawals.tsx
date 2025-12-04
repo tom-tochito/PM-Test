@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./SeamlessWithdrawals.module.css";
 import Button from "@/components/ui/Button";
+import Icon from "@/components/ui/Icon";
 
 export default function SeamlessWithdrawals() {
   return (
@@ -16,64 +17,19 @@ export default function SeamlessWithdrawals() {
           <div className={styles.features}>
             <div className={styles.feature}>
               <div className={styles.featureIcon}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path
-                    d="M9 12L11 14L15 10"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <circle
-                    cx="12"
-                    cy="12"
-                    r="10"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  />
-                </svg>
+                <Icon name="check-circle" size={24} />
               </div>
               <span>Same-day processing</span>
             </div>
             <div className={styles.feature}>
               <div className={styles.featureIcon}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path
-                    d="M9 12L11 14L15 10"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <circle
-                    cx="12"
-                    cy="12"
-                    r="10"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  />
-                </svg>
+                <Icon name="check-circle" size={24} />
               </div>
               <span>No hidden fees</span>
             </div>
             <div className={styles.feature}>
               <div className={styles.featureIcon}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path
-                    d="M9 12L11 14L15 10"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <circle
-                    cx="12"
-                    cy="12"
-                    r="10"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  />
-                </svg>
+                <Icon name="check-circle" size={24} />
               </div>
               <span>Multiple payment methods</span>
             </div>

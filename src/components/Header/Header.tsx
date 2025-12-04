@@ -5,6 +5,7 @@ import Image from "next/image";
 import styles from "./Header.module.css";
 import Button from "@/components/ui/Button";
 import Logo from "@/components/ui/Logo";
+import Icon from "@/components/ui/Icon";
 
 const navItems = [
   {
@@ -135,21 +136,11 @@ export default function Header() {
                       aria-haspopup="true"
                     >
                       {item.label}
-                      <svg
+                      <Icon
+                        name="chevron-down"
+                        size={16}
                         className={`${styles.chevron} ${openDropdown === item.label ? styles.chevronOpen : ""}`}
-                        width="16"
-                        height="16"
-                        viewBox="0 0 16 16"
-                        fill="none"
-                      >
-                        <path
-                          d="M4 6L8 10L12 6"
-                          stroke="currentColor"
-                          strokeWidth="1.5"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
+                      />
                     </button>
                     {openDropdown === item.label && item.items && (
                       <div
@@ -175,21 +166,7 @@ export default function Header() {
                   >
                     {item.label}
                     {item.isHighlighted && (
-                      <svg
-                        width="12"
-                        height="12"
-                        viewBox="0 0 12 12"
-                        fill="none"
-                        className={styles.arrowIcon}
-                      >
-                        <path
-                          d="M2 6H10M10 6L6 2M10 6L6 10"
-                          stroke="currentColor"
-                          strokeWidth="1.5"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
+                      <Icon name="arrow-right" size={12} className={styles.arrowIcon} />
                     )}
                   </a>
                 )}
@@ -234,21 +211,11 @@ export default function Header() {
                     onClick={() => handleDropdownToggle(item.label)}
                   >
                     {item.label}
-                    <svg
+                    <Icon
+                      name="chevron-down"
+                      size={16}
                       className={`${styles.chevron} ${openDropdown === item.label ? styles.chevronOpen : ""}`}
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                    >
-                      <path
-                        d="M4 6L8 10L12 6"
-                        stroke="currentColor"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
+                    />
                   </button>
                   {openDropdown === item.label && item.items && (
                     <div className={styles.mobileDropdown}>

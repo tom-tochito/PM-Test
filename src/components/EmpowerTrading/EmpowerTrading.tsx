@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./EmpowerTrading.module.css";
+import Icon from "@/components/ui/Icon";
 
 const features = [
   {
@@ -50,19 +51,7 @@ export default function EmpowerTrading() {
 
         <div className={styles.featuresGrid}>
           <div className={styles.centerIcon}>
-            <svg
-              width="40"
-              height="26"
-              viewBox="0 0 40 26"
-              fill="none"
-              className={styles.crossIcon}
-            >
-              <path
-                d="M20 0V26M0 13H40"
-                stroke="#ffa0a0"
-                strokeWidth="4"
-              />
-            </svg>
+            <Icon name="cross" width={40} height={26} color="#ffa0a0" className={styles.crossIcon} />
           </div>
 
           {features.map((feature) => (

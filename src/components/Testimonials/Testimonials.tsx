@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import styles from "./Testimonials.module.css";
+import Icon from "@/components/ui/Icon";
 
 const testimonials = [
   {
@@ -41,16 +42,7 @@ export default function Testimonials() {
         <div className={styles.testimonialContainer}>
           <div className={styles.testimonialCard}>
             <div className={styles.quoteIcon}>
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                <path
-                  d="M14 24H8C8 17.373 13.373 12 20 12V16C15.582 16 12 19.582 12 24V24H14C16.209 24 18 25.791 18 28V32C18 34.209 16.209 36 14 36H10C7.791 36 6 34.209 6 32V24H14Z"
-                  fill="currentColor"
-                />
-                <path
-                  d="M38 24H32C32 17.373 37.373 12 44 12V16C39.582 16 36 19.582 36 24V24H38C40.209 24 42 25.791 42 28V32C42 34.209 40.209 36 38 36H34C31.791 36 30 34.209 30 32V24H38Z"
-                  fill="currentColor"
-                />
-              </svg>
+              <Icon name="quote" size={48} />
             </div>
             <p className={styles.testimonialText}>
               {testimonials[activeIndex].text}
