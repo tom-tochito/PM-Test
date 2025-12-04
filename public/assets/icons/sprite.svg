@@ -99,4 +99,43 @@
   <symbol id="icon-cross" viewBox="0 0 40 26">
     <path d="M20 0V26M0 13H40" stroke="currentColor" stroke-width="4" fill="none"/>
   </symbol>
+
+  <!-- Market card icons -->
+  <symbol id="icon-coin" viewBox="0 0 50 50">
+    <circle cx="25" cy="25" r="20" stroke="currentColor" stroke-width="2.5" fill="none"/>
+    <path d="M25 15V35M20 20H30M20 30H30" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+  </symbol>
+
+  <symbol id="icon-graph-ascend" viewBox="0 0 50 50">
+    <path d="M8 35L18 25L28 30L42 15" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <path d="M35 15H42V22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </symbol>
+
+  <symbol id="icon-analytics-pie" viewBox="0 0 50 50">
+    <circle cx="25" cy="25" r="18" stroke="currentColor" stroke-width="2.5" fill="none"/>
+    <path d="M25 7V25H43" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <path d="M25 25L37 37" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  </symbol>
+
+  <symbol id="icon-earth" viewBox="0 0 50 50">
+    <circle cx="25" cy="25" r="18" stroke="currentColor" stroke-width="2.5" fill="none"/>
+    <ellipse cx="25" cy="25" rx="8" ry="18" stroke="currentColor" stroke-width="2.5" fill="none"/>
+    <path d="M7 25H43" stroke="currentColor" stroke-width="2.5" fill="none"/>
+    <path d="M10 15H40M10 35H40" stroke="currentColor" stroke-width="2" fill="none"/>
+  </symbol>
+
+  <symbol id="icon-arrow-up-right" viewBox="0 0 20 20">
+    <path d="M6 14L14 6M14 6H7M14 6V13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </symbol>
+
+  <symbol id="icon-spreads" viewBox="0 0 24 24">
+    <rect x="3" y="6" width="4" height="12" rx="1" stroke="currentColor" stroke-width="1.5" fill="none"/>
+    <rect x="10" y="3" width="4" height="18" rx="1" stroke="currentColor" stroke-width="1.5" fill="none"/>
+    <rect x="17" y="9" width="4" height="9" rx="1" stroke="currentColor" stroke-width="1.5" fill="none"/>
+  </symbol>
+
+  <symbol id="icon-secure" viewBox="0 0 24 24">
+    <path d="M12 2L4 6V11C4 16.5 7.5 21.5 12 23C16.5 21.5 20 16.5 20 11V6L12 2Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+    <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </symbol>
 </svg>
