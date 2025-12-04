@@ -103,10 +103,10 @@ export default function Header() {
             <span className={styles.separator}>|</span>
             <div className={styles.languageSelector}>
               <Image
-                src="/assets/images/flag-en.png"
+                src="/assets/images/flag-gb.png"
                 alt="English"
                 width={24}
-                height={24}
+                height={16}
                 className={styles.flag}
               />
               <span>EN</span>

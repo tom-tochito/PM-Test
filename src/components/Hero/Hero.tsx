@@ -4,10 +4,10 @@ import Button from "@/components/ui/Button";
 import Icon from "@/components/ui/Icon";
 
 const tickerItems = [
-  { flag: "🇺🇸", pair: "USD/EUR", trend: "up", value: "0.00014", change: "-234.45" },
-  { flag: "🪙", pair: "XAUUSD", trend: "down", value: "0.00014", change: "-234.45" },
-  { flag: "🇺🇸", pair: "USD/EUR", trend: "up", value: "0.00014", change: "-234.45" },
-  { flag: "🪙", pair: "XAUUSD", trend: "down", value: "0.00014", change: "-234.45" },
+  { flags: ["/assets/images/flag-us.png", "/assets/images/flag-eu.png"], pair: "USD/EUR", trend: "up", value: "0.00014", change: "-234.45" },
+  { flags: ["/assets/images/flag-au.png", "/assets/images/flag-us.png"], pair: "XAU/USD", trend: "down", value: "0.00014", change: "-234.45" },
+  { flags: ["/assets/images/flag-us.png", "/assets/images/flag-eu.png"], pair: "USD/EUR", trend: "up", value: "0.00014", change: "-234.45" },
+  { flags: ["/assets/images/flag-au.png", "/assets/images/flag-us.png"], pair: "XAU/USD", trend: "down", value: "0.00014", change: "-234.45" },
 ];
 
 export default function Hero() {
@@ -138,23 +138,47 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      <div className={styles.ticker}>
-        <div className={styles.tickerTrack}>
-          {[...tickerItems, ...tickerItems].map((item, index) => (
-            <div key={index} className={styles.tickerItem}>
-              <span className={styles.tickerFlag}>{item.flag}</span>
-              <span className={styles.tickerPair}>{item.pair}</span>
-              <Icon
-                name={item.trend === "up" ? "trend-up" : "trend-down"}
-                width={40}
-                height={16}
-                color={item.trend === "up" ? "#22C55E" : "#EF4444"}
-                className={styles.tickerTrend}
-              />
-              <span className={styles.tickerValue}>{item.value}</span>
-              <span className={styles.tickerChange}>{item.change}</span>
-            </div>
-          ))}
+      <div className={styles.tickerWrapper}>
+        <svg
+          className={styles.tickerCurve}
+          viewBox="0 0 1440 120"
+          preserveAspectRatio="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0,120 L0,60 Q360,0 720,40 T1440,60 L1440,120 Z"
+            fill="white"
+          />
+        </svg>
+        <div className={styles.ticker}>
+          <div className={styles.tickerTrack}>
+            {[...tickerItems, ...tickerItems].map((item, index) => (
+              <div key={index} className={styles.tickerItem}>
+                <div className={styles.tickerFlags} data-count={item.flags.length}>
+                  {item.flags.map((flag, flagIndex) => (
+                    <Image
+                      key={flagIndex}
+                      src={flag}
+                      alt=""
+                      width={28}
+                      height={20}
+                      className={styles.tickerFlag}
+                    />
+                  ))}
+                </div>
+                <span className={styles.tickerPair}>{item.pair}</span>
+                <Icon
+                  name={item.trend === "up" ? "trend-up" : "trend-down"}
+                  width={40}
+                  height={16}
+                  color={item.trend === "up" ? "#22C55E" : "#EF4444"}
+                  className={styles.tickerTrend}
+                />
+                <span className={styles.tickerValue}>{item.value}</span>
+                <span className={styles.tickerChange}>{item.change}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

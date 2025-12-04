@@ -65,35 +65,37 @@
 }
 
 .visual {
-  position: relative;
+  position: absolute;
+  right: 50%;
+  transform: translateX(75%);
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   z-index: 1;
 }
 
 /* Dual Phone Layout */
 .phonesContainer {
   position: relative;
-  width: 340px;
-  height: 500px;
+  width: 450px;
+  height: 700px;
 }
 
 .phoneBack {
   position: absolute;
   left: 0;
-  top: 0;
-  width: 240px;
-  height: 480px;
+  bottom: -80px;
+  width: 340px;
+  height: 580px;
   z-index: 1;
 }
 
 .phoneFront {
   position: absolute;
-  left: 70px;
-  top: 40px;
-  width: 240px;
-  height: 480px;
+  left: 110px;
+  bottom: -60px;
+  width: 314px;
+  height: 640px;
   z-index: 2;
 }
 
@@ -247,20 +249,31 @@
 }
 
 /* Ticker Strip */
+.tickerWrapper {
+  position: relative;
+  margin-top: -60px;
+  z-index: 10;
+}
+
+.tickerCurve {
+  display: block;
+  width: 100%;
+  height: 100px;
+}
+
 .ticker {
   position: relative;
   background: white;
   padding: 24px 0;
   overflow: hidden;
-  margin-top: -30px;
-  z-index: 10;
 }
 
 .tickerTrack {
   display: flex;
-  gap: 40px;
-  animation: scroll 20s linear infinite;
+  gap: 24px;
+  animation: scroll 25s linear infinite;
   width: max-content;
+  padding: 0 24px;
 }
 
 @keyframes scroll {
@@ -275,16 +288,48 @@
 .tickerItem {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
   background: white;
   padding: 16px 24px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 40px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.06);
   white-space: nowrap;
 }
 
+.tickerFlags {
+  display: flex;
+  align-items: center;
+  position: relative;
+  min-width: 28px;
+  height: 28px;
+}
+
+.tickerFlags[data-count="2"] {
+  width: 42px;
+}
+
 .tickerFlag {
-  font-size: 24px;
+  width: 28px;
+  height: 20px;
+  border-radius: 2px;
+  object-fit: cover;
+}
+
+.tickerFlags[data-count="2"] .tickerFlag {
+  position: absolute;
+  border: 1px solid white;
+}
+
+.tickerFlags[data-count="2"] .tickerFlag:first-child {
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.tickerFlags[data-count="2"] .tickerFlag:last-child {
+  left: 12px;
+  top: 8px;
+  z-index: 2;
 }
 
 .tickerPair {
@@ -294,7 +339,7 @@
 }
 
 .tickerTrend {
-  margin: 0 8px;
+  margin: 0 4px;
 }
 
 .tickerValue {
@@ -320,22 +365,22 @@
   }
 
   .phonesContainer {
-    width: 300px;
-    height: 440px;
+    width: 380px;
+    height: 580px;
   }
 
   .phoneBack {
     left: 0;
-    top: 0;
-    width: 210px;
-    height: 420px;
+    bottom: -60px;
+    width: 280px;
+    height: 480px;
   }
 
   .phoneFront {
-    left: 60px;
-    top: 35px;
-    width: 210px;
-    height: 420px;
+    left: 90px;
+    bottom: -50px;
+    width: 260px;
+    height: 530px;
   }
 }
 
@@ -371,26 +416,29 @@
   }
 
   .visual {
+    position: relative;
+    right: auto;
+    transform: none;
     justify-content: center;
   }
 
   .phonesContainer {
-    width: 240px;
-    height: 360px;
+    width: 300px;
+    height: 460px;
   }
 
   .phoneBack {
     left: 0;
-    top: 0;
-    width: 170px;
-    height: 340px;
+    bottom: -40px;
+    width: 220px;
+    height: 380px;
   }
 
   .phoneFront {
-    left: 50px;
-    top: 30px;
-    width: 170px;
-    height: 340px;
+    left: 70px;
+    bottom: -30px;
+    width: 210px;
+    height: 420px;
   }
 
   .phoneFrame {
@@ -412,8 +460,12 @@
     height: 10px;
   }
 
-  .ticker {
-    margin-top: 0;
+  .tickerWrapper {
+    margin-top: -40px;
+  }
+
+  .tickerCurve {
+    height: 60px;
   }
 }
 
@@ -432,22 +484,22 @@
   }
 
   .phonesContainer {
-    width: 190px;
-    height: 280px;
+    width: 240px;
+    height: 360px;
   }
 
   .phoneBack {
     left: 0;
-    top: 0;
-    width: 135px;
-    height: 270px;
+    bottom: -30px;
+    width: 175px;
+    height: 300px;
   }
 
   .phoneFront {
-    left: 40px;
-    top: 20px;
-    width: 135px;
-    height: 270px;
+    left: 55px;
+    bottom: -20px;
+    width: 170px;
+    height: 330px;
   }
 
   .phoneFrame {
@@ -505,7 +557,8 @@
   }
 
   .tickerFlag {
-    font-size: 20px;
+    width: 24px;
+    height: 24px;
   }
 
   .tickerPair,
