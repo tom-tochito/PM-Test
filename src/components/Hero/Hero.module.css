@@ -75,25 +75,25 @@
 /* Dual Phone Layout */
 .phonesContainer {
   position: relative;
-  width: 420px;
-  height: 640px;
+  width: 340px;
+  height: 500px;
 }
 
 .phoneBack {
   position: absolute;
   left: 0;
-  top: 60px;
-  width: 300px;
-  height: 500px;
+  top: 0;
+  width: 240px;
+  height: 480px;
   z-index: 1;
 }
 
 .phoneFront {
   position: absolute;
-  right: 0;
-  top: 0;
-  width: 314px;
-  height: 640px;
+  left: 70px;
+  top: 40px;
+  width: 240px;
+  height: 480px;
   z-index: 2;
 }
 
@@ -108,8 +108,8 @@
   width: 100%;
   height: 100%;
   background: #000;
-  border-radius: 51px;
-  padding: 14px;
+  border-radius: 40px;
+  padding: 10px;
   box-shadow: 24px 24px 48px -3px rgba(16, 24, 40, 0.2),
     12px 12px 24px -1.5px rgba(16, 24, 40, 0.08);
 }
@@ -118,7 +118,7 @@
   width: 100%;
   height: 100%;
   background: #141516;
-  border-radius: 40px;
+  border-radius: 32px;
   overflow: hidden;
   position: relative;
   display: flex;
@@ -320,19 +320,22 @@
   }
 
   .phonesContainer {
-    width: 360px;
-    height: 540px;
+    width: 300px;
+    height: 440px;
   }
 
   .phoneBack {
-    top: 50px;
-    width: 260px;
+    left: 0;
+    top: 0;
+    width: 210px;
     height: 420px;
   }
 
   .phoneFront {
-    width: 264px;
-    height: 540px;
+    left: 60px;
+    top: 35px;
+    width: 210px;
+    height: 420px;
   }
 }
 
@@ -372,28 +375,31 @@
   }
 
   .phonesContainer {
-    width: 300px;
-    height: 420px;
+    width: 240px;
+    height: 360px;
   }
 
   .phoneBack {
-    top: 40px;
-    width: 200px;
-    height: 320px;
+    left: 0;
+    top: 0;
+    width: 170px;
+    height: 340px;
   }
 
   .phoneFront {
-    width: 200px;
-    height: 410px;
+    left: 50px;
+    top: 30px;
+    width: 170px;
+    height: 340px;
   }
 
   .phoneFrame {
-    border-radius: 36px;
-    padding: 10px;
+    border-radius: 32px;
+    padding: 8px;
   }
 
   .phoneScreen {
-    border-radius: 28px;
+    border-radius: 26px;
   }
 
   .dynamicIsland {
@@ -426,28 +432,31 @@
   }
 
   .phonesContainer {
-    width: 240px;
-    height: 340px;
+    width: 190px;
+    height: 280px;
   }
 
   .phoneBack {
-    top: 30px;
-    width: 160px;
-    height: 260px;
+    left: 0;
+    top: 0;
+    width: 135px;
+    height: 270px;
   }
 
   .phoneFront {
-    width: 160px;
-    height: 328px;
+    left: 40px;
+    top: 20px;
+    width: 135px;
+    height: 270px;
   }
 
   .phoneFrame {
-    border-radius: 28px;
-    padding: 8px;
+    border-radius: 24px;
+    padding: 6px;
   }
 
   .phoneScreen {
-    border-radius: 22px;
+    border-radius: 20px;
   }
 
   .dynamicIsland {
