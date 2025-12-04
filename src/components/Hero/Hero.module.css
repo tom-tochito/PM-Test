@@ -7,19 +7,15 @@
 .background {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 50%, #991b1b 100%);
+  background: linear-gradient(103deg, #320002 -27.78%, #900006 2.52%);
   z-index: -1;
 }
 
 .background::after {
   content: '';
   position: absolute;
-  top: -40px;
-  right: 0;
-  width: 60%;
-  height: 120%;
-  background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
-  clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+  inset: 0;
+  background: linear-gradient(270deg, #ED1D25 4.8%, rgba(237, 29, 37, 0.00) 103.15%);
 }
 
 .container {
@@ -79,16 +75,16 @@
 /* Dual Phone Layout */
 .phonesContainer {
   position: relative;
-  width: 520px;
+  width: 420px;
   height: 640px;
 }
 
 .phoneBack {
   position: absolute;
   left: 0;
-  top: 0;
-  width: 406px;
-  height: 632px;
+  top: 60px;
+  width: 300px;
+  height: 500px;
   z-index: 1;
 }
 
@@ -134,20 +130,37 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 24px 8px;
+  padding: 14px 20px 10px;
   color: white;
   font-size: 14px;
   font-weight: 600;
+  position: relative;
 }
 
 .time {
   font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+}
+
+.dynamicIsland {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 26px;
+  background: #000;
+  border-radius: 20px;
 }
 
 .statusIcons {
   display: flex;
-  gap: 4px;
-  font-size: 12px;
+  align-items: center;
+  gap: 5px;
+}
+
+.statusIcons svg {
+  display: block;
 }
 
 /* App Content */
@@ -307,13 +320,14 @@
   }
 
   .phonesContainer {
-    width: 440px;
+    width: 360px;
     height: 540px;
   }
 
   .phoneBack {
-    width: 340px;
-    height: 530px;
+    top: 50px;
+    width: 260px;
+    height: 420px;
   }
 
   .phoneFront {
@@ -358,27 +372,38 @@
   }
 
   .phonesContainer {
-    width: 380px;
-    height: 480px;
+    width: 300px;
+    height: 420px;
   }
 
   .phoneBack {
-    width: 280px;
-    height: 436px;
+    top: 40px;
+    width: 200px;
+    height: 320px;
   }
 
   .phoneFront {
-    width: 220px;
-    height: 450px;
+    width: 200px;
+    height: 410px;
   }
 
   .phoneFrame {
-    border-radius: 40px;
+    border-radius: 36px;
     padding: 10px;
   }
 
   .phoneScreen {
-    border-radius: 32px;
+    border-radius: 28px;
+  }
+
+  .dynamicIsland {
+    width: 70px;
+    height: 22px;
+  }
+
+  .statusIcons svg {
+    width: 14px;
+    height: 10px;
   }
 
   .ticker {
@@ -401,27 +426,46 @@
   }
 
   .phonesContainer {
-    width: 300px;
-    height: 400px;
+    width: 240px;
+    height: 340px;
   }
 
   .phoneBack {
-    width: 220px;
-    height: 342px;
+    top: 30px;
+    width: 160px;
+    height: 260px;
   }
 
   .phoneFront {
-    width: 180px;
-    height: 368px;
+    width: 160px;
+    height: 328px;
   }
 
   .phoneFrame {
-    border-radius: 32px;
+    border-radius: 28px;
     padding: 8px;
   }
 
   .phoneScreen {
-    border-radius: 26px;
+    border-radius: 22px;
+  }
+
+  .dynamicIsland {
+    width: 55px;
+    height: 18px;
+  }
+
+  .statusBar {
+    padding: 10px 14px 8px;
+  }
+
+  .time {
+    font-size: 12px;
+  }
+
+  .statusIcons svg {
+    width: 12px;
+    height: 9px;
   }
 
   .watchlistItem {
