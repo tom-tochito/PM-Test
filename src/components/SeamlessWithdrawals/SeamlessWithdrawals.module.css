@@ -1,6 +1,7 @@
 .section {
   padding: 80px 0;
-  background-color: var(--color-white);
+  background: linear-gradient(103deg, #FFDFDF -11.21%, #FFFCFC 23.26%, #FFD5D6 95.34%);
+  border-radius: 20px;
   overflow: hidden;
 }
 

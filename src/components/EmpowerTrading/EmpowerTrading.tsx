@@ -1,6 +1,5 @@
 import Image from "next/image";
 import styles from "./EmpowerTrading.module.css";
-import Icon from "@/components/ui/Icon";
 
 const features = [
   {
@@ -51,7 +50,12 @@ export default function EmpowerTrading() {
 
         <div className={styles.featuresGrid}>
           <div className={styles.centerIcon}>
-            <Icon name="cross" width={40} height={26} color="#ffa0a0" className={styles.crossIcon} />
+            <Image
+              src="/assets/images/logo-icon.svg"
+              alt="Premier Markets"
+              width={53}
+              height={46}
+            />
           </div>
 
           {features.map((feature) => (
