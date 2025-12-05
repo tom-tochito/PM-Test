@@ -73,12 +73,9 @@
   transition: opacity 0.2s ease;
 }
 
-.navArrow:first-child {
-  opacity: 0.4;
-}
-
 .navArrow:hover {
-  opacity: 0.8;
+  background: var(--color-primary);
+  color: white;
 }
 
 .grid {

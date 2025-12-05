@@ -12,11 +12,14 @@
 .paymentSection {
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 50px;
   padding-bottom: 40px;
 }
 
-.paymentImage {
-  opacity: 0.8;
+.paymentIcon {
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
 }
 
 .divider {
@@ -61,10 +64,6 @@
   justify-content: center;
   color: var(--color-white);
   transition: all var(--transition-fast);
-}
-
-.socialLink:first-child {
-  color: var(--color-primary);
 }
 
 .socialLink:hover {

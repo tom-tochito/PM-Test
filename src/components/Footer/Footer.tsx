@@ -7,6 +7,14 @@ const quickLinks = ["About Us", "Our Markets", "Platforms", "Pricing"];
 const supportLinks = ["Help Center", "FAQs", "Terms & Conditions", "Privacy Policy"];
 const companyLinks = ["Careers", "News & Updates", "Partnerships", "Legal Documents"];
 
+const paymentMethods = [
+  { name: "PayPal", src: "/assets/images/paypal.svg", width: 80, height: 20 },
+  { name: "Mastercard", src: "/assets/images/mastercard.svg", width: 50, height: 30 },
+  { name: "Skrill", src: "/assets/images/Skrill.svg", width: 60, height: 20 },
+  { name: "Apple Pay", src: "/assets/images/applepay.svg", width: 50, height: 20 },
+  { name: "Visa", src: "/assets/images/Visa.svg", width: 60, height: 20 },
+];
+
 const socialIcons = [
   { name: "Facebook", icon: "facebook" },
   { name: "LinkedIn", icon: "linkedin" },
@@ -21,13 +29,16 @@ export default function Footer() {
       <div className={styles.container}>
         {/* Payment Methods */}
         <div className={styles.paymentSection}>
-          <Image
-            src="/assets/images/payment-methods.png"
-            alt="Payment Methods"
-            width={400}
-            height={40}
-            className={styles.paymentImage}
-          />
+          {paymentMethods.map((payment) => (
+            <Image
+              key={payment.name}
+              src={payment.src}
+              alt={payment.name}
+              width={payment.width}
+              height={payment.height}
+              className={styles.paymentIcon}
+            />
+          ))}
         </div>
 
         <div className={styles.divider} />

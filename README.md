@@ -2,6 +2,8 @@
 
 A responsive landing page for Premier Markets forex trading platform, built with Next.js 14, TypeScript, and CSS Modules.
 
+**Repository:** [https://github.com/tom-tochito/PM-Test](https://github.com/tom-tochito/PM-Test)
+
 ## Tech Stack
 
 - **Framework**: Next.js 14 (App Router)
@@ -133,7 +135,3 @@ src/
 9. **SEO**: Add structured data (JSON-LD), Open Graph tags, and sitemap generation.
 
 10. **Error Boundaries**: Add error boundaries for graceful error handling.
-
-## License
-
-Private - For demonstration purposes only.
