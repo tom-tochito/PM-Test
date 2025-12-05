@@ -122,27 +122,29 @@ export default function OurMarkets() {
                 </div>
               </div>
             </div>
-            <div className={styles.chart}>
-              <Image
-                src="/assets/images/xau-chart.svg"
-                alt="XAU/USD Trading Chart"
-                width={663}
-                height={343}
-                className={styles.chartImage}
-              />
-            </div>
-            <div className={styles.timeframes}>
-              {timeframes.map((tf) => (
-                <button
-                  key={tf}
-                  className={`${styles.timeframeBtn} ${
-                    activeTimeframe === tf ? styles.activeTimeframe : ""
-                  }`}
-                  onClick={() => setActiveTimeframe(tf)}
-                >
-                  {tf}
-                </button>
-              ))}
+            <div className={styles.chartWrapper}>
+              <div className={styles.chart}>
+                <Image
+                  src="/assets/images/xau-chart.svg"
+                  alt="XAU/USD Trading Chart"
+                  width={663}
+                  height={343}
+                  className={styles.chartImage}
+                />
+              </div>
+              <div className={styles.timeframes}>
+                {timeframes.map((tf) => (
+                  <button
+                    key={tf}
+                    className={`${styles.timeframeBtn} ${
+                      activeTimeframe === tf ? styles.activeTimeframe : ""
+                    }`}
+                    onClick={() => setActiveTimeframe(tf)}
+                  >
+                    {tf}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -154,10 +156,6 @@ export default function OurMarkets() {
               Past performance is not a reliable indicator of future results
             </span>
           </div>
-          <a href="#" className={styles.browseLink}>
-            Browse all markets
-            <Icon name="chevron-right" size={16} />
-          </a>
         </div>
       </div>
     </section>
