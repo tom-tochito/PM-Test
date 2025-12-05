@@ -8,12 +8,17 @@
     "start": "next start",
     "lint": "next lint"
   },
-  "keywords": ["nextjs", "react", "typescript", "landing-page"],
+  "keywords": [
+    "nextjs",
+    "react",
+    "typescript",
+    "landing-page"
+  ],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.15.1",
   "dependencies": {
-    "next": "^16.0.6",
+    "next": "^16.0.7",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
@@ -22,7 +27,7 @@
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
     "eslint": "^9.39.1",
-    "eslint-config-next": "^16.0.6",
+    "eslint-config-next": "^16.0.7",
     "typescript": "^5.9.3"
   }
 }
