@@ -107,20 +107,26 @@ export default function OurMarkets() {
                   </div>
                 </div>
               </div>
-              <div className={styles.statsCard}>
-                <div className={styles.statRow}>
-                  <span className={styles.statLabel}>Buyers</span>
-                  <span className={styles.statValue}>66.93%</span>
-                  <div className={styles.statBar} />
-                  <span className={styles.low}>Low: 3686.38</span>
+              <div className={styles.statsWrapper}>
+                <div className={styles.statsCard}>
+                  <div className={styles.statRow}>
+                    <span className={styles.statLabel}>Buyers</span>
+                    <div className={styles.statBarWrapper}>
+                      <span className={styles.statValue}>66.93%</span>
+                      <div className={styles.statBar} />
+                    </div>
+                    <span className={styles.low}>Low: 3686.38</span>
+                  </div>
+                  <div className={styles.statRow}>
+                    <span className={styles.statLabel}>Seller</span>
+                    <div className={styles.statBarWrapper}>
+                      <span className={styles.statValue}>66.93%</span>
+                      <div className={styles.statBar} />
+                    </div>
+                    <span className={styles.high}>High: 3788.96</span>
+                  </div>
                 </div>
-                <div className={styles.statRow}>
-                  <span className={styles.statLabel}>Seller</span>
-                  <span className={styles.statValue}>66.93%</span>
-                  <div className={styles.statBar} />
-                  <span className={styles.high}>High: 3788.96</span>
                 </div>
-              </div>
             </div>
             <div className={styles.chartWrapper}>
               <div className={styles.chart}>
@@ -146,15 +152,12 @@ export default function OurMarkets() {
                 ))}
               </div>
             </div>
-          </div>
-        </div>
-
-        <div className={styles.footer}>
-          <div className={styles.disclaimerWrapper}>
-            <Icon name="info" size={12} className={styles.infoIcon} />
-            <span className={styles.disclaimer}>
-              Past performance is not a reliable indicator of future results
-            </span>
+            <div className={styles.disclaimerWrapper}>
+              <Icon name="info" size={12} className={styles.infoIcon} />
+              <span className={styles.disclaimer}>
+                Past performance is not a reliable indicator of future results
+              </span>
+            </div>
           </div>
         </div>
       </div>

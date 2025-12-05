@@ -59,7 +59,7 @@
 
 .content {
   display: flex;
-  gap: 40px;
+  gap: 24px;
   align-items: flex-start;
 }
 
@@ -111,7 +111,8 @@
 }
 
 .marketCard:hover .marketIcon {
-  filter: brightness(0.8) sepia(1) hue-rotate(-30deg) saturate(5);
+  filter: brightness(0.9) sepia(1) hue-rotate(-50deg) saturate(8);
+  background-color: rgba(237, 29, 37, 0.15);
 }
 
 .marketDetails {
@@ -165,6 +166,7 @@
 .chartArea {
   flex: 1;
   position: relative;
+  max-width: 720px;
 }
 
 .chartHeader {
@@ -291,6 +293,12 @@
   color: var(--color-primary);
 }
 
+.statsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 .statsCard {
   background-color: #f9f9f9;
   border-radius: 20px;
@@ -306,7 +314,7 @@
 .statRow {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
 }
 
 .statLabel {
@@ -314,6 +322,13 @@
   font-weight: 500;
   font-size: 10px;
   color: black;
+  line-height: 1.245;
+}
+
+.statBarWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0;
 }
 
 .statValue {
@@ -321,6 +336,7 @@
   font-weight: 700;
   font-size: 10px;
   color: black;
+  line-height: 1.245;
 }
 
 .statBar {
@@ -328,6 +344,8 @@
   height: 14px;
   background-color: #edeef2;
   border-radius: 4px;
+  flex-shrink: 0;
+  margin-left: 2px;
 }
 
 .low {
@@ -335,6 +353,8 @@
   font-weight: 500;
   font-size: 10px;
   color: #54c764;
+  line-height: 1.245;
+  margin-left: auto;
 }
 
 .high {
@@ -342,12 +362,29 @@
   font-weight: 500;
   font-size: 10px;
   color: #e74947;
+  line-height: 1.245;
+  margin-left: auto;
+}
+
+.browseLink {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-urbanist);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-black);
+  text-decoration: none;
+}
+
+.browseLinkIcon {
+  color: var(--color-primary);
 }
 
 .chartWrapper {
   display: flex;
   align-items: flex-start;
-  gap: 8px;
+  gap: 12px;
 }
 
 .chart {
@@ -355,7 +392,8 @@
   background-color: transparent;
   border-radius: var(--radius-md);
   overflow: visible;
-  max-width: 580px;
+  width: 580px;
+  flex-shrink: 0;
 }
 
 .chartImage {
@@ -368,7 +406,9 @@
   flex-direction: column;
   gap: 4px;
   flex-shrink: 0;
-  padding-top: 20px;
+  margin-top: 0;
+  align-self: stretch;
+  justify-content: flex-start;
 }
 
 .timeframeBtn {
@@ -394,17 +434,11 @@
   background-color: #ed1d25;
 }
 
-.footer {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-top: 24px;
-}
-
 .disclaimerWrapper {
   display: flex;
   align-items: center;
   gap: 6px;
+  margin-top: 16px;
 }
 
 .infoIcon {
