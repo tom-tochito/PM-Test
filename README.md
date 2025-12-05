@@ -1,12 +1,12 @@
 # Premier Markets Landing Page
 
-A responsive landing page for Premier Markets forex trading platform, built with Next.js 14, TypeScript, and CSS Modules.
+A responsive landing page for Premier Markets forex trading platform, built with Next.js 16, TypeScript, and CSS Modules.
 
 **Repository:** [https://github.com/tom-tochito/PM-Test](https://github.com/tom-tochito/PM-Test)
 
 ## Tech Stack
 
-- **Framework**: Next.js 14 (App Router)
+- **Framework**: Next.js 16 (App Router)
 - **Language**: TypeScript
 - **Styling**: CSS Modules
 - **Package Manager**: pnpm
@@ -23,7 +23,7 @@ A responsive landing page for Premier Markets forex trading platform, built with
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/tom-tochito/PM-Test.git
 cd PM-Test
 ```
 
@@ -74,7 +74,15 @@ src/
 │   ├── CTASection/      # Steps to get started
 │   ├── Footer/          # Site footer with links
 │   └── ui/
-│       └── Button/      # Reusable button component
+│       ├── Button/      # Reusable button component
+│       ├── Icon/        # SVG icon component with sprite support
+│       ├── Logo/        # Brand logo component
+│       └── icons/       # Individual icon components
+├── constants/           # Shared data & configuration
+│   ├── navigation.ts    # Header navigation items
+│   ├── footer.ts        # Footer links & payment methods
+│   ├── testimonials.ts  # Testimonial data
+│   └── index.ts         # Barrel export
 ```
 
 ## Assumptions Made

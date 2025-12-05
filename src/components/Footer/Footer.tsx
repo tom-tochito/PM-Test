@@ -2,26 +2,13 @@ import Image from "next/image";
 import styles from "./Footer.module.css";
 import Logo from "@/components/ui/Logo";
 import Icon from "@/components/ui/Icon";
-
-const quickLinks = ["About Us", "Our Markets", "Platforms", "Pricing"];
-const supportLinks = ["Help Center", "FAQs", "Terms & Conditions", "Privacy Policy"];
-const companyLinks = ["Careers", "News & Updates", "Partnerships", "Legal Documents"];
-
-const paymentMethods = [
-  { name: "PayPal", src: "/assets/images/paypal.svg", width: 80, height: 20 },
-  { name: "Mastercard", src: "/assets/images/mastercard1.svg", width: 50, height: 30 },
-  { name: "Skrill", src: "/assets/images/Skrill.svg", width: 60, height: 20 },
-  { name: "Apple Pay", src: "/assets/images/applepay.svg", width: 50, height: 20 },
-  { name: "Visa", src: "/assets/images/Visa.svg", width: 60, height: 20 },
-];
-
-const socialIcons = [
-  { name: "Facebook", icon: "facebook" },
-  { name: "LinkedIn", icon: "linkedin" },
-  { name: "Instagram", icon: "instagram" },
-  { name: "YouTube", icon: "youtube" },
-  { name: "Twitter", icon: "twitter" },
-];
+import {
+  quickLinks,
+  supportLinks,
+  companyLinks,
+  paymentMethods,
+  socialIcons,
+} from "@/constants";
 
 export default function Footer() {
   return (
