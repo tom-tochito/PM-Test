@@ -98,12 +98,12 @@ export default function OurMarkets() {
                   <div className={styles.buyPrice}>
                     <span className={styles.priceLabel}>Buy</span>
                     <span className={styles.priceValue}>3773.31</span>
-                    <Icon name="chevron-right" size={11} className={styles.priceArrow} />
+                    <Icon name="arrow-right" size={11} className={styles.priceArrow} />
                   </div>
                   <div className={styles.sellPrice}>
                     <span className={styles.priceLabel}>Sell</span>
                     <span className={styles.priceValue}>3773.61</span>
-                    <Icon name="chevron-right" size={11} className={styles.priceArrow} />
+                    <Icon name="arrow-right" size={11} className={styles.priceArrow} />
                   </div>
                 </div>
               </div>

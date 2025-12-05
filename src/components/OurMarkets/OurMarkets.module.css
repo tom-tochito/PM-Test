@@ -186,7 +186,7 @@
 
 .goldCard {
   position: relative;
-  background: linear-gradient(90deg, #4a0a0a 0%, #7a1515 40%, #6a1010 70%, #5a0a0a 100%);
+  background: url('/assets/images/background.svg') center / cover no-repeat;
   border-radius: 20px;
   padding: 30px 27px;
   width: 455px;
@@ -199,12 +199,13 @@
 
 .goldBars {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 90px;
-  height: 100%;
-  background: url('/assets/images/gold-bars.svg') left center / contain no-repeat;
-  z-index: 0;
+  bottom: 0;
+  left: 10px;
+  width: 100px;
+  height: 90px;
+  background: url('/assets/images/gold.jpg') center / contain no-repeat;
+  z-index: 1;
+  mix-blend-mode: multiply;
 }
 
 .expandIcon {
@@ -274,7 +275,7 @@
 }
 
 .sellPrice .priceArrow {
-  color: var(--color-primary);
+  color: white;
   transform: rotate(-45deg);
 }
 
