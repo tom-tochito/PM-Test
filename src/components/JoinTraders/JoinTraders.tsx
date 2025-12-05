@@ -10,7 +10,9 @@ export default function JoinTraders() {
           <h2 className={styles.title}>
             Join <span className={styles.highlight}>50,000+</span>
             <br />
-            traders who trust us
+            traders who
+            <br />
+            trust us
           </h2>
         </div>
         <div className={styles.right}>
@@ -30,30 +32,24 @@ export default function JoinTraders() {
         </div>
       </div>
       <div className={styles.imageContainer}>
-        <Image
-          src="/assets/images/trading-interface.png"
-          alt="Trading Interface"
-          width={600}
-          height={400}
-          className={styles.tradingImage}
-        />
         <div className={styles.promoCard}>
+          <div className={styles.promoEllipse} />
+          <div className={styles.promoImageWrapper}>
+            <Image
+              src="/assets/images/promo-trader.png"
+              alt="Trader with euro coins"
+              width={380}
+              height={570}
+              className={styles.promoImage}
+            />
+          </div>
           <div className={styles.promoCardContent}>
             <h3 className={styles.promoTitle}>
               Everything you need to trade the markets
             </h3>
-            <Button variant="primary" size="md">
+            <button className={styles.promoButton}>
               Explore Accounts
-            </Button>
-          </div>
-          <div className={styles.promoImageWrapper}>
-            <Image
-              src="/assets/images/mobile-promo.png"
-              alt="Mobile Trading"
-              width={200}
-              height={300}
-              className={styles.promoImage}
-            />
+            </button>
           </div>
         </div>
       </div>

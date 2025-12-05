@@ -57,50 +57,91 @@
   position: relative;
 }
 
-.tradingImage {
+.promoCard {
+  position: relative;
   width: 100%;
-  height: auto;
-  border-radius: var(--radius-md);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  max-width: 1164px;
+  height: 259px;
+  background: linear-gradient(90deg, #ed1d25 0%, #940006 100%);
+  border-radius: 20px;
+  overflow: clip;
 }
 
-.promoCard {
+.promoEllipse {
   position: absolute;
-  bottom: -40px;
-  left: var(--container-padding);
-  width: calc(100% - 2 * var(--container-padding));
-  max-width: 1164px;
-  background: linear-gradient(90deg, #ed1d25 0%, #940006 100%);
-  border-radius: var(--radius-md);
-  padding: 40px;
+  left: 275px;
+  top: -195px;
+  width: 531px;
+  height: 531px;
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.promoImageWrapper {
+  position: absolute;
+  left: 126px;
+  top: -239px;
+  width: 649px;
+  height: 683px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  overflow: hidden;
+  justify-content: center;
+  z-index: 2;
+}
+
+.promoImage {
+  width: 380px;
+  height: 570px;
+  object-fit: cover;
+  transform: rotate(-37.666deg);
 }
 
 .promoCardContent {
-  max-width: 400px;
+  position: absolute;
+  left: calc(50% + 138px);
+  top: 46px;
   z-index: 1;
 }
 
 .promoTitle {
   font-family: var(--font-gilroy);
   font-size: 36px;
-  font-weight: 700;
-  color: var(--color-white);
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  color: #fff;
   margin-bottom: 24px;
   letter-spacing: -1.08px;
+  width: 377px;
 }
 
-.promoImageWrapper {
-  position: absolute;
-  left: 50px;
-  bottom: 0;
+.promoButton {
+  display: flex;
+  width: 193px;
+  height: 58px;
+  padding: 14px 34px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 55px;
+  border: 2px solid #6D0002;
+  background: linear-gradient(90deg, #390507 0%, #962020 100%);
+  box-shadow:
+    0 4px 34px 0 rgba(255, 255, 255, 0.25),
+    0 4px 34px 0 rgba(255, 0, 0, 0.25),
+    0 3px 10px 0 rgba(255, 255, 255, 0.25) inset,
+    0 4px 24px 0 rgba(255, 74, 74, 0.25),
+    0 4px 24px 0 rgba(152, 14, 14, 0.25) inset,
+    0 2px 5px 0 rgba(255, 7, 7, 0.75) inset;
+  color: var(--color-white);
+  font-family: var(--font-urbanist);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
-.promoImage {
-  object-fit: contain;
+.promoButton:hover {
+  transform: translateY(-2px);
 }
 
 @media (max-width: 1024px) {
@@ -117,19 +158,37 @@
     position: relative;
     bottom: 0;
     margin-top: 40px;
-    flex-direction: column;
-    text-align: center;
+    height: auto;
+    min-height: 194px;
+  }
+
+  .promoCardContent {
+    right: 40px;
   }
 
   .promoImageWrapper {
-    position: relative;
-    left: 0;
+    display: none;
+  }
+
+  .promoEllipse {
+    display: none;
   }
 }
 
 @media (max-width: 640px) {
   .title {
     font-size: 36px;
+  }
+
+  .promoCard {
+    padding: 30px 20px;
+  }
+
+  .promoCardContent {
+    position: relative;
+    right: auto;
+    top: auto;
+    text-align: center;
   }
 
   .promoTitle {
