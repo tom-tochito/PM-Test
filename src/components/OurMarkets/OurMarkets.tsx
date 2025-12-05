@@ -55,10 +55,10 @@ export default function OurMarkets() {
 
         <div className={styles.content}>
           <div className={styles.marketList}>
-            {marketData.map((market, index) => (
+            {marketData.map((market) => (
               <div
                 key={market.id}
-                className={`${styles.marketCard} ${index === 0 ? styles.highlighted : ""}`}
+                className={styles.marketCard}
               >
                 <div className={styles.marketInfo}>
                   <div className={styles.marketIcon}>
@@ -98,12 +98,12 @@ export default function OurMarkets() {
                   <div className={styles.buyPrice}>
                     <span className={styles.priceLabel}>Buy</span>
                     <span className={styles.priceValue}>3773.31</span>
-                    <Icon name="arrow-down" size={11} className={styles.priceArrow} />
+                    <Icon name="chevron-right" size={11} className={styles.priceArrow} />
                   </div>
                   <div className={styles.sellPrice}>
                     <span className={styles.priceLabel}>Sell</span>
                     <span className={styles.priceValue}>3773.61</span>
-                    <Icon name="arrow-up" size={11} className={styles.priceArrow} />
+                    <Icon name="chevron-right" size={11} className={styles.priceArrow} />
                   </div>
                 </div>
               </div>
@@ -113,7 +113,6 @@ export default function OurMarkets() {
                     <span className={styles.statLabel}>Buyers</span>
                     <div className={styles.statBarWrapper}>
                       <span className={styles.statValue}>66.93%</span>
-                      <div className={styles.statBar} />
                     </div>
                     <span className={styles.low}>Low: 3686.38</span>
                   </div>
@@ -121,12 +120,15 @@ export default function OurMarkets() {
                     <span className={styles.statLabel}>Seller</span>
                     <div className={styles.statBarWrapper}>
                       <span className={styles.statValue}>66.93%</span>
-                      <div className={styles.statBar} />
                     </div>
                     <span className={styles.high}>High: 3788.96</span>
                   </div>
                 </div>
-                </div>
+                <a href="#" className={styles.browseLink}>
+                  Browse all markets
+                  <Icon name="chevron-right" size={24} className={styles.browseLinkIcon} />
+                </a>
+              </div>
             </div>
             <div className={styles.chartWrapper}>
               <div className={styles.chart}>
