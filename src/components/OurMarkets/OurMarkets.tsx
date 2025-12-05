@@ -15,11 +15,11 @@ const categories = [
 ];
 
 const marketData = [
-  { id: 1, symbol: "BTC", name: "Bitcoin", price: "524,0", change: "+3,25%", positive: true },
-  { id: 2, symbol: "BTC", name: "Bitcoin", price: "524,0", change: "+3,25%", positive: true },
-  { id: 3, symbol: "BTC", name: "Bitcoin", price: "524,0", change: "+3,25%", positive: true },
-  { id: 4, symbol: "BTC", name: "Bitcoin", price: "524,0", change: "+3,25%", positive: true },
-  { id: 5, symbol: "ETH", name: "Ethereum", price: "524,0", change: "+3,25%", positive: true },
+  { id: 1, symbol: "BTC", name: "Bitcoin", price: "524,0", change: "+3,25%", positive: true, icon: "/assets/images/btc.svg" },
+  { id: 2, symbol: "BTC", name: "Bitcoin", price: "524,0", change: "+3,25%", positive: true, icon: "/assets/images/btc.svg" },
+  { id: 3, symbol: "BTC", name: "Bitcoin", price: "524,0", change: "+3,25%", positive: true, icon: "/assets/images/btc.svg" },
+  { id: 4, symbol: "BTC", name: "Bitcoin", price: "524,0", change: "+3,25%", positive: true, icon: "/assets/images/btc.svg" },
+  { id: 5, symbol: "ETH", name: "Ethereum", price: "524,0", change: "+3,25%", positive: true, icon: "/assets/images/eth.png" },
 ];
 
 const timeframes = ["1d", "1h", "4h", "1m", "5m", "15m", "30m", "1w"];
@@ -63,7 +63,7 @@ export default function OurMarkets() {
                 <div className={styles.marketInfo}>
                   <div className={styles.marketIcon}>
                     <Image
-                      src="/assets/images/bitcoin-icon.png"
+                      src={market.icon}
                       alt={market.symbol}
                       width={40}
                       height={40}
@@ -91,29 +91,33 @@ export default function OurMarkets() {
           <div className={styles.chartArea}>
             <div className={styles.chartHeader}>
               <div className={styles.goldCard}>
+                <div className={styles.goldBars} />
+                <Icon name="expand" size={17} className={styles.expandIcon} />
                 <h3 className={styles.goldTitle}>Gold</h3>
                 <div className={styles.goldPrices}>
                   <div className={styles.buyPrice}>
                     <span className={styles.priceLabel}>Buy</span>
                     <span className={styles.priceValue}>3773.31</span>
+                    <Icon name="arrow-down" size={11} className={styles.priceArrow} />
                   </div>
                   <div className={styles.sellPrice}>
                     <span className={styles.priceLabel}>Sell</span>
                     <span className={styles.priceValue}>3773.61</span>
+                    <Icon name="arrow-up" size={11} className={styles.priceArrow} />
                   </div>
                 </div>
               </div>
               <div className={styles.statsCard}>
                 <div className={styles.statRow}>
-                  <span>Buyers</span>
+                  <span className={styles.statLabel}>Buyers</span>
                   <span className={styles.statValue}>66.93%</span>
+                  <div className={styles.statBar} />
+                  <span className={styles.low}>Low: 3686.38</span>
                 </div>
                 <div className={styles.statRow}>
-                  <span>Seller</span>
+                  <span className={styles.statLabel}>Seller</span>
                   <span className={styles.statValue}>66.93%</span>
-                </div>
-                <div className={styles.highLow}>
-                  <span className={styles.low}>Low: 3686.38</span>
+                  <div className={styles.statBar} />
                   <span className={styles.high}>High: 3788.96</span>
                 </div>
               </div>
@@ -144,9 +148,12 @@ export default function OurMarkets() {
         </div>
 
         <div className={styles.footer}>
-          <span className={styles.disclaimer}>
-            Past performance is not a reliable indicator of future results
-          </span>
+          <div className={styles.disclaimerWrapper}>
+            <Icon name="info" size={12} className={styles.infoIcon} />
+            <span className={styles.disclaimer}>
+              Past performance is not a reliable indicator of future results
+            </span>
+          </div>
           <a href="#" className={styles.browseLink}>
             Browse all markets
             <Icon name="chevron-right" size={16} />
