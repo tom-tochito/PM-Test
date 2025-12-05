@@ -124,8 +124,8 @@ export default function OurMarkets() {
             </div>
             <div className={styles.chart}>
               <Image
-                src="/assets/images/chart-frame.png"
-                alt="Trading Chart"
+                src="/assets/images/xau-chart.svg"
+                alt="XAU/USD Trading Chart"
                 width={663}
                 height={343}
                 className={styles.chartImage}

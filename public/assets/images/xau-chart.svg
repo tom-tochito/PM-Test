@@ -1,0 +1,69 @@
+<svg width="663" height="343" viewBox="0 0 663 343" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="pinkGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ed1d25" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#ed1d25" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="grayGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#c4c4c4" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#c4c4c4" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="663" height="343" fill="#fdf5f5"/>
+
+  <!-- XAU/USD Label -->
+  <text x="20" y="25" font-family="Arial, sans-serif" font-size="14" font-weight="500" fill="#333">XAU/USD</text>
+
+  <!-- Y-axis labels -->
+  <text x="20" y="55" font-family="Arial, sans-serif" font-size="11" fill="#999">100</text>
+  <text x="20" y="105" font-family="Arial, sans-serif" font-size="11" fill="#999">80</text>
+  <text x="20" y="155" font-family="Arial, sans-serif" font-size="11" fill="#999">60</text>
+  <text x="20" y="205" font-family="Arial, sans-serif" font-size="11" fill="#999">40</text>
+  <text x="20" y="255" font-family="Arial, sans-serif" font-size="11" fill="#999">20</text>
+  <text x="20" y="305" font-family="Arial, sans-serif" font-size="11" fill="#999">0</text>
+
+  <!-- Dashed horizontal grid lines -->
+  <line x1="45" y1="50" x2="643" y2="50" stroke="#ed1d25" stroke-width="1" stroke-dasharray="4,4" opacity="0.3"/>
+  <line x1="45" y1="100" x2="643" y2="100" stroke="#ed1d25" stroke-width="1" stroke-dasharray="4,4" opacity="0.3"/>
+  <line x1="45" y1="150" x2="643" y2="150" stroke="#ed1d25" stroke-width="1" stroke-dasharray="4,4" opacity="0.3"/>
+  <line x1="45" y1="200" x2="643" y2="200" stroke="#ed1d25" stroke-width="1" stroke-dasharray="4,4" opacity="0.3"/>
+  <line x1="45" y1="250" x2="643" y2="250" stroke="#ed1d25" stroke-width="1" stroke-dasharray="4,4" opacity="0.3"/>
+  <line x1="45" y1="300" x2="643" y2="300" stroke="#ed1d25" stroke-width="1" stroke-dasharray="4,4" opacity="0.3"/>
+
+  <!-- X-axis labels -->
+  <text x="55" y="325" font-family="Arial, sans-serif" font-size="11" fill="#999">Jan</text>
+  <text x="105" y="325" font-family="Arial, sans-serif" font-size="11" fill="#999">Feb</text>
+  <text x="155" y="325" font-family="Arial, sans-serif" font-size="11" fill="#999">Mar</text>
+  <text x="205" y="325" font-family="Arial, sans-serif" font-size="11" fill="#999">Apr</text>
+  <text x="255" y="325" font-family="Arial, sans-serif" font-size="11" fill="#999">May</text>
+  <text x="305" y="325" font-family="Arial, sans-serif" font-size="11" fill="#999">Jun</text>
+  <text x="355" y="325" font-family="Arial, sans-serif" font-size="11" fill="#999">Jul</text>
+  <text x="405" y="325" font-family="Arial, sans-serif" font-size="11" fill="#999">Aug</text>
+  <text x="455" y="325" font-family="Arial, sans-serif" font-size="11" fill="#999">Sep</text>
+  <text x="505" y="325" font-family="Arial, sans-serif" font-size="11" fill="#999">Oct</text>
+  <text x="555" y="325" font-family="Arial, sans-serif" font-size="11" fill="#999">Nov</text>
+  <text x="605" y="325" font-family="Arial, sans-serif" font-size="11" fill="#999">Dec</text>
+
+  <!-- Gray background wave (area fill) -->
+  <path d="M45 220 Q100 200, 150 180 T250 160 T350 190 T450 150 T550 180 T643 200 L643 300 L45 300 Z" fill="url(#grayGradient)"/>
+
+  <!-- Pink/Red area fill -->
+  <path d="M45 240 Q80 220, 120 200 Q160 180, 200 170 Q240 160, 280 155 Q320 150, 360 90 Q400 110, 440 130 Q480 100, 520 85 Q560 100, 600 130 Q620 145, 643 160 L643 300 L45 300 Z" fill="url(#pinkGradient)"/>
+
+  <!-- Red line on top -->
+  <path d="M45 240 Q80 220, 120 200 Q160 180, 200 170 Q240 160, 280 155 Q320 150, 360 90 Q400 110, 440 130 Q480 100, 520 85 Q560 100, 600 130 Q620 145, 643 160" stroke="#ed1d25" stroke-width="2" fill="none"/>
+
+  <!-- Vertical marker line -->
+  <line x1="360" y1="50" x2="360" y2="300" stroke="#ed1d25" stroke-width="1" opacity="0.5"/>
+  <rect x="355" y="90" width="10" height="210" fill="#ed1d25" opacity="0.1"/>
+
+  <!-- Tooltip -->
+  <rect x="320" y="55" width="80" height="38" rx="6" fill="#ed1d25"/>
+  <text x="360" y="72" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">$1,425.00</text>
+  <text x="360" y="86" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle" opacity="0.8">28 Okt 2023</text>
+
+  <!-- Tooltip pointer -->
+  <polygon points="355,93 365,93 360,100" fill="#ed1d25"/>
+</svg>
