@@ -7,7 +7,7 @@
 .background {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, #1f1f1f 0%, #0a0a0a 100%);
+  background: linear-gradient(139deg, #110001 35.63%, #3B0000 127.07%);
   z-index: -1;
   overflow: hidden;
 }
@@ -73,7 +73,11 @@
 }
 
 .highlight {
-  color: var(--color-primary);
+  color: #ED1D25;
+  font-family: var(--font-gilroy);
+  font-size: 62px;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .subtitle {

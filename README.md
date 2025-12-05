@@ -99,6 +99,8 @@ src/
 
 6. **Images**: Images were exported from Figma where available. Some decorative elements use CSS gradients instead.
 
+7. **Constants Architecture**: Navigation, footer, and testimonial data are extracted to `/src/constants/` for maintainability. This separates content from component logic, making it easier to update site content without modifying React components.
+
 ## Browser Support
 
 - Chrome (latest)
