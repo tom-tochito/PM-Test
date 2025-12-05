@@ -32,6 +32,15 @@ export default function JoinTraders() {
         </div>
       </div>
       <div className={styles.imageContainer}>
+        <div className={styles.promoManWrapper}>
+          <Image
+            src="/assets/images/promo-man.png"
+            alt="Trader"
+            width={255}
+            height={339}
+            className={styles.promoMan}
+          />
+        </div>
         <div className={styles.promoCard}>
           <div className={styles.promoEllipse} />
           <div className={styles.promoImageWrapper}>

@@ -96,6 +96,21 @@
   transform: rotate(-37.666deg);
 }
 
+.promoManWrapper {
+  position: absolute;
+  left: 240px;
+  bottom: 0;
+  z-index: 3;
+}
+
+.promoMan {
+  width: 255px;
+  height: 339px;
+  aspect-ratio: 85/113;
+  object-fit: cover;
+  display: block;
+}
+
 .promoCardContent {
   position: absolute;
   left: calc(50% + 138px);
