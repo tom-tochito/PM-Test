@@ -1,8 +1,9 @@
 .section {
-  padding: 80px 0;
+  padding: 60px 0;
   background: linear-gradient(103deg, #FFDFDF -11.21%, #FFFCFC 23.26%, #FFD5D6 95.34%);
   border-radius: 20px;
   overflow: hidden;
+  position: relative;
 }
 
 .container {
@@ -10,97 +11,215 @@
   margin: 0 auto;
   padding: 0 var(--container-padding);
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: flex-start;
   gap: 60px;
+  position: relative;
 }
 
-.content {
-  max-width: 500px;
-}
-
-.badge {
-  display: inline-block;
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--color-primary);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 16px;
-}
-
-.title {
-  font-family: var(--font-gilroy);
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: -1.44px;
-  color: var(--color-black);
-  margin-bottom: 20px;
-}
-
-.description {
-  font-size: 18px;
-  line-height: 1.6;
-  color: var(--color-text-secondary);
-  margin-bottom: 32px;
-}
-
-.features {
+.featuresColumn {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  margin-bottom: 32px;
+  gap: 40px;
+  padding-top: 20px;
+  flex-shrink: 0;
+  width: 400px;
 }
 
-.feature {
+.featureItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 24px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.featureItem:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.featureItem:hover .iconBox {
+  background: linear-gradient(135deg, #FF0000 27.48%, #871115 62.02%);
+  border-color: transparent;
+}
+
+.featureItem:hover .iconBox img {
+  filter: brightness(0) invert(1);
+}
+
+.iconBox {
+  width: 50px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ffdada;
+  border-radius: 13px;
+  flex-shrink: 0;
+  color: var(--color-primary);
+  transition: background-color 0.2s ease;
+}
+
+
+.featureContent {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.featureTitle {
+  font-family: var(--font-gilroy);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.245;
+  color: #151515;
+  margin: 0;
+}
+
+.featureDescription {
+  font-family: var(--font-urbanist);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.245;
+  color: #151515;
+  margin: 0;
+  max-width: 280px;
+}
+
+.imageColumn {
+  position: relative;
+  flex: 1;
+  min-height: 500px;
+}
+
+.phoneWrapper {
+  position: absolute;
+  right: -100px;
+  top: -60px;
+  transform: rotate(5.5deg);
+}
+
+.phoneImage {
+  width: auto;
+  height: auto;
+  max-width: 800px;
+}
+
+.mastercardBadge {
+  position: absolute;
+  right: 0;
+  top: 70px;
+  width: 148px;
+  height: 78px;
+  overflow: hidden;
+}
+
+.notificationCard {
+  position: absolute;
+  left: 100px;
+  bottom: 60px;
   display: flex;
   align-items: center;
   gap: 12px;
+  background: white;
+  padding: 16px 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.notificationAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.notificationContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.notificationLabel {
+  font-family: var(--font-urbanist);
+  font-size: 12px;
+  font-weight: 400;
+  color: #888;
+}
+
+.notificationName {
+  font-family: var(--font-urbanist);
   font-size: 16px;
-  color: var(--color-black);
+  font-weight: 700;
+  color: #151515;
 }
 
-.featureIcon {
-  width: 24px;
-  height: 24px;
-  color: var(--color-success);
+.notificationStatus {
+  font-family: var(--font-urbanist);
+  font-size: 14px;
+  font-weight: 400;
+  color: #151515;
 }
 
-.imageWrapper {
-  position: relative;
-  flex-shrink: 0;
+.statusPercent {
+  color: var(--color-primary);
+  font-weight: 600;
 }
 
-.image {
-  object-fit: contain;
+.cursorIcon {
+  position: absolute;
+  left: 380px;
+  top: 130px;
+  color: #151515;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .container {
-    flex-direction: column-reverse;
-    text-align: center;
+    flex-direction: column;
   }
 
-  .content {
-    max-width: 100%;
+  .featuresColumn {
+    width: 100%;
   }
 
-  .features {
-    align-items: center;
+  .imageColumn {
+    width: 100%;
+    min-height: 400px;
   }
 
-  .imageWrapper {
+  .phoneWrapper {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: rotate(0deg);
+    display: flex;
+    justify-content: center;
+  }
+
+  .phoneImage {
     max-width: 400px;
+  }
+
+  .mastercardBadge,
+  .notificationCard,
+  .cursorIcon {
+    display: none;
   }
 }
 
 @media (max-width: 768px) {
-  .title {
-    font-size: 36px;
+  .featureItem {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
-  .imageWrapper {
-    max-width: 300px;
+  .featureDescription {
+    max-width: 100%;
   }
 }

@@ -51,22 +51,6 @@
     <path d="M17.3 1.9L10.8 9.5l7.2 9.6h-5.9l-4.6-6.2-5.3 6.2H.5l6.9-7.9L.5 1.9h6l4.2 5.7 5-5.7h1.6zm-1.5 15.3L4.9 3.8h1.6l10.9 13.4h-1.6z" fill="currentColor"/>
   </symbol>
 
-  <!-- CTA/Step icons -->
-  <symbol id="icon-user" viewBox="0 0 24 24">
-    <path d="M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z" stroke="currentColor" stroke-width="2" fill="none"/>
-    <path d="M12 14C8.13401 14 5 17.134 5 21H19C19 17.134 15.866 14 12 14Z" stroke="currentColor" stroke-width="2" fill="none"/>
-  </symbol>
-
-  <symbol id="icon-card" viewBox="0 0 24 24">
-    <path d="M3 10H21M7 15H8M12 15H13M6 19H18C19.1046 19 20 18.1046 20 17V7C20 5.89543 19.1046 5 18 5H6C4.89543 5 4 5.89543 4 7V17C4 18.1046 4.89543 19 6 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-  </symbol>
-
-  <!-- Feature icons -->
-  <symbol id="icon-check-circle" viewBox="0 0 24 24">
-    <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
-  </symbol>
-
   <!-- Quote icon -->
   <symbol id="icon-quote" viewBox="0 0 48 48">
     <path d="M14 24H8C8 17.373 13.373 12 20 12V16C15.582 16 12 19.582 12 24V24H14C16.209 24 18 25.791 18 28V32C18 34.209 16.209 36 14 36H10C7.791 36 6 34.209 6 32V24H14Z" fill="currentColor"/>
@@ -90,5 +74,10 @@
     <circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1" fill="none"/>
     <path d="M6 5.5V8" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
     <circle cx="6" cy="3.75" r="0.5" fill="currentColor"/>
+  </symbol>
+
+  <!-- Cursor icon -->
+  <symbol id="icon-cursor" viewBox="0 0 24 24">
+    <path d="M5 3L19 12L12 13L9 20L5 3Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="currentColor"/>
   </symbol>
 </svg>

@@ -18,10 +18,12 @@ export default function DailyUpdates() {
     <section className={styles.section}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <span className={styles.badge}>Daily Updates</span>
-          <h2 className={styles.title}>
-            Everything you need to trade the markets
-          </h2>
+          <div className={styles.headerLeft}>
+            <span className={styles.badge}>Daily Updates</span>
+            <h2 className={styles.title}>
+              Everything you need to trade the markets
+            </h2>
+          </div>
           <a href="#" className={styles.viewAll}>
             View all
             <Icon name="chevron-right-sm" width={6} height={12} />
@@ -56,8 +58,8 @@ export default function DailyUpdates() {
 
           <div className={styles.videoCard}>
             <Image
-              src="/assets/images/video-thumbnail.png"
-              alt="Video"
+              src="/assets/images/laptop-video.png"
+              alt="Trade CFDs with Premier Markets"
               fill
               className={styles.videoThumbnail}
             />
@@ -69,11 +71,26 @@ export default function DailyUpdates() {
 
           <div className={styles.newsBar}>
             <Image
-              src="/assets/images/chart-screenshot.png"
-              alt="Market News"
+              src="/assets/images/market-cap-bg.png"
+              alt=""
               fill
               className={styles.newsImage}
             />
+            <div className={styles.newsOverlay} />
+            <div className={styles.newsContent}>
+              <h3 className={styles.newsTitle}>
+                Premier Market - Market Cap Weighted PR (BKP)
+              </h3>
+              <p className={styles.newsDescription}>
+                Stay ahead of the latest tech trends with our algorithmically selected
+                portfolio of the 15 top tech stocks each month.
+              </p>
+              <div className={styles.newsTags}>
+                <span>Google</span>
+                <span>Trending</span>
+                <span>investing.com</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
