@@ -9,7 +9,7 @@ const companyLinks = ["Careers", "News & Updates", "Partnerships", "Legal Docume
 
 const paymentMethods = [
   { name: "PayPal", src: "/assets/images/paypal.svg", width: 80, height: 20 },
-  { name: "Mastercard", src: "/assets/images/mastercard.svg", width: 50, height: 30 },
+  { name: "Mastercard", src: "/assets/images/mastercard1.svg", width: 50, height: 30 },
   { name: "Skrill", src: "/assets/images/Skrill.svg", width: 60, height: 20 },
   { name: "Apple Pay", src: "/assets/images/applepay.svg", width: 50, height: 20 },
   { name: "Visa", src: "/assets/images/Visa.svg", width: 60, height: 20 },
